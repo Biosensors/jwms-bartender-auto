@@ -140,7 +140,7 @@ namespace BartenderStudy
            
             //format.SubStrings["xuhao"].Value = textBox1.Text;
 
-			setData();
+			setData_onlySerial();
 
 			// Get the printer from the dropdown and assign it to the format.
 
@@ -237,7 +237,7 @@ namespace BartenderStudy
 			
 
 		}
-		private void setData()
+		private void setData_longFormat()
 		{
 			//10304 219 19
 			String sBarCode = "";
@@ -269,5 +269,27 @@ namespace BartenderStudy
 
 			}
 		}
-	}
+        private void setData_onlySerial()
+        {
+            //10304 219 19
+            String sBarCode = "";
+            const string BAR_CODE_DEMO = "219";
+            //1			+ 0304	+	Space	+ 219	+	Space	+	19
+            //产品类别	+ 批号	+	空格	+ 序号	+	空格	+	19	
+            string sProductClass = "";  //1 或 2
+            string sBatchNo = "";       //0304
+            string sSerialNum = "";     //219
+            string sYear = "";          //19		
+            sBarCode = textBox1.Text;
+            if (sBarCode.Length != BAR_CODE_DEMO.Length)
+            {
+                MessageBox.Show("代码应该是3位序号!\n" , "JWMS提示");
+            }
+            else
+            {                            
+                sSerialNum = sBarCode;              
+                format.SubStrings["xuhao"].Value = sSerialNum;             
+            }
+        }
+    }
 }
