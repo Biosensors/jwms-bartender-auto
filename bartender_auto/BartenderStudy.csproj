@@ -36,7 +36,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -92,7 +92,7 @@
   <ItemGroup>
     <Reference Include="Seagull.BarTender.Print, Version=11.0.3.1, Culture=neutral, PublicKeyToken=109ff779a1b4cbc7, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Seagulll X64\Seagull.BarTender.Print.dll</HintPath>
+      <HintPath>Seagulll X32\Seagull.BarTender.Print.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

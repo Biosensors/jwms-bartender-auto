@@ -273,17 +273,17 @@ namespace BartenderStudy
         {
             //10304 219 19
             String sBarCode = "";
-            const string BAR_CODE_DEMO = "219";
+            const string BAR_CODE_DEMO = "1234567890";
             //1			+ 0304	+	Space	+ 219	+	Space	+	19
             //产品类别	+ 批号	+	空格	+ 序号	+	空格	+	19	
-            string sProductClass = "";  //1 或 2
-            string sBatchNo = "";       //0304
+            //string sProductClass = "";  //1 或 2
+            //string sBatchNo = "";       //0304
             string sSerialNum = "";     //219
-            string sYear = "";          //19		
+            //string sYear = "";          //19		
             sBarCode = textBox1.Text;
             if (sBarCode.Length != BAR_CODE_DEMO.Length)
             {
-                MessageBox.Show("代码应该是3位序号!\n" , "JWMS提示");
+                MessageBox.Show("代码应该是10位序号!\n" , "JWMS提示");
             }
             else
             {                            
