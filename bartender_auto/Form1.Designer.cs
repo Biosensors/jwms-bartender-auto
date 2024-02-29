@@ -48,12 +48,28 @@
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.checkAutoPrint = new System.Windows.Forms.CheckBox();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.txtPlanQty = new System.Windows.Forms.TextBox();
+			this.label12 = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
+			this.comboBox3 = new System.Windows.Forms.ComboBox();
+			this.label10 = new System.Windows.Forms.Label();
+			this.comboBox2 = new System.Windows.Forms.ComboBox();
+			this.txtBatchNo = new System.Windows.Forms.TextBox();
+			this.txt = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.lstYear = new System.Windows.Forms.ListBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.dtDateTo = new System.Windows.Forms.DateTimePicker();
+			this.dtDateFrom = new System.Windows.Forms.DateTimePicker();
 			((System.ComponentModel.ISupportInitialize)(this.numCodesQuantity)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
 			this.groupBox4.SuspendLayout();
+			this.groupBox5.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -151,7 +167,7 @@
 			// 
 			this.btnPrint.Enabled = false;
 			this.btnPrint.Font = new System.Drawing.Font("宋体", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.btnPrint.Location = new System.Drawing.Point(34, 409);
+			this.btnPrint.Location = new System.Drawing.Point(29, 539);
 			this.btnPrint.Name = "btnPrint";
 			this.btnPrint.Size = new System.Drawing.Size(633, 35);
 			this.btnPrint.TabIndex = 13;
@@ -281,11 +297,187 @@
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "SN号录入";
 			// 
+			// groupBox5
+			// 
+			this.groupBox5.Controls.Add(this.txtPlanQty);
+			this.groupBox5.Controls.Add(this.label12);
+			this.groupBox5.Controls.Add(this.label11);
+			this.groupBox5.Controls.Add(this.comboBox3);
+			this.groupBox5.Controls.Add(this.label10);
+			this.groupBox5.Controls.Add(this.comboBox2);
+			this.groupBox5.Controls.Add(this.txtBatchNo);
+			this.groupBox5.Controls.Add(this.txt);
+			this.groupBox5.Controls.Add(this.label9);
+			this.groupBox5.Controls.Add(this.lstYear);
+			this.groupBox5.Controls.Add(this.label8);
+			this.groupBox5.Controls.Add(this.label7);
+			this.groupBox5.Controls.Add(this.dtDateTo);
+			this.groupBox5.Controls.Add(this.dtDateFrom);
+			this.groupBox5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.groupBox5.Location = new System.Drawing.Point(12, 387);
+			this.groupBox5.Name = "groupBox5";
+			this.groupBox5.Size = new System.Drawing.Size(686, 133);
+			this.groupBox5.TabIndex = 17;
+			this.groupBox5.TabStop = false;
+			this.groupBox5.Text = "信息";
+			// 
+			// txtPlanQty
+			// 
+			this.txtPlanQty.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.txtPlanQty.Location = new System.Drawing.Point(386, 37);
+			this.txtPlanQty.MaxLength = 4;
+			this.txtPlanQty.Name = "txtPlanQty";
+			this.txtPlanQty.Size = new System.Drawing.Size(75, 29);
+			this.txtPlanQty.TabIndex = 29;
+			this.txtPlanQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlanQty_KeyPress);
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label12.Location = new System.Drawing.Point(303, 46);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(77, 14);
+			this.label12.TabIndex = 28;
+			this.label12.Text = "计划数量：";
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label11.Location = new System.Drawing.Point(303, 128);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(77, 14);
+			this.label11.TabIndex = 27;
+			this.label11.Text = "产品规则：";
+			this.label11.Visible = false;
+			// 
+			// comboBox3
+			// 
+			this.comboBox3.FormattingEnabled = true;
+			this.comboBox3.Location = new System.Drawing.Point(386, 122);
+			this.comboBox3.Name = "comboBox3";
+			this.comboBox3.Size = new System.Drawing.Size(294, 24);
+			this.comboBox3.TabIndex = 26;
+			this.comboBox3.Visible = false;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label10.Location = new System.Drawing.Point(22, 127);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(77, 14);
+			this.label10.TabIndex = 25;
+			this.label10.Text = "产品类别：";
+			this.label10.Visible = false;
+			// 
+			// comboBox2
+			// 
+			this.comboBox2.FormattingEnabled = true;
+			this.comboBox2.Location = new System.Drawing.Point(105, 122);
+			this.comboBox2.Name = "comboBox2";
+			this.comboBox2.Size = new System.Drawing.Size(180, 24);
+			this.comboBox2.TabIndex = 24;
+			this.comboBox2.Visible = false;
+			// 
+			// txtBatchNo
+			// 
+			this.txtBatchNo.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.txtBatchNo.Location = new System.Drawing.Point(107, 36);
+			this.txtBatchNo.MaxLength = 15;
+			this.txtBatchNo.Name = "txtBatchNo";
+			this.txtBatchNo.Size = new System.Drawing.Size(178, 29);
+			this.txtBatchNo.TabIndex = 23;
+			this.txtBatchNo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBatchNo_MouseClick);
+			this.txtBatchNo.TextChanged += new System.EventHandler(this.txtBatchNo_TextChanged);
+			// 
+			// txt
+			// 
+			this.txt.AutoSize = true;
+			this.txt.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.txt.Location = new System.Drawing.Point(24, 45);
+			this.txt.Name = "txt";
+			this.txt.Size = new System.Drawing.Size(77, 14);
+			this.txt.TabIndex = 22;
+			this.txt.Text = "生产批号：";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label9.Location = new System.Drawing.Point(554, 83);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(35, 14);
+			this.label9.TabIndex = 21;
+			this.label9.Text = "年：";
+			// 
+			// lstYear
+			// 
+			this.lstYear.FormattingEnabled = true;
+			this.lstYear.ItemHeight = 16;
+			this.lstYear.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+			this.lstYear.Location = new System.Drawing.Point(591, 61);
+			this.lstYear.Name = "lstYear";
+			this.lstYear.Size = new System.Drawing.Size(62, 52);
+			this.lstYear.TabIndex = 20;
+			this.lstYear.SelectedIndexChanged += new System.EventHandler(this.lstYear_SelectedIndexChanged);
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label8.Location = new System.Drawing.Point(303, 83);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(77, 14);
+			this.label8.TabIndex = 19;
+			this.label8.Text = "失效日期：";
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label7.Location = new System.Drawing.Point(24, 83);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(77, 14);
+			this.label7.TabIndex = 2;
+			this.label7.Text = "生产日期：";
+			// 
+			// dtDateTo
+			// 
+			this.dtDateTo.CustomFormat = "yyyy-MM-dd";
+			this.dtDateTo.Enabled = false;
+			this.dtDateTo.Location = new System.Drawing.Point(386, 74);
+			this.dtDateTo.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+			this.dtDateTo.MinDate = new System.DateTime(2020, 12, 25, 0, 0, 0, 0);
+			this.dtDateTo.Name = "dtDateTo";
+			this.dtDateTo.Size = new System.Drawing.Size(157, 26);
+			this.dtDateTo.TabIndex = 18;
+			// 
+			// dtDateFrom
+			// 
+			this.dtDateFrom.CustomFormat = "yyyy-MM-dd";
+			this.dtDateFrom.Location = new System.Drawing.Point(107, 74);
+			this.dtDateFrom.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+			this.dtDateFrom.MinDate = new System.DateTime(2020, 12, 25, 0, 0, 0, 0);
+			this.dtDateFrom.Name = "dtDateFrom";
+			this.dtDateFrom.Size = new System.Drawing.Size(178, 26);
+			this.dtDateFrom.TabIndex = 1;
+			this.dtDateFrom.ValueChanged += new System.EventHandler(this.dtDateFrom_ValueChanged);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(732, 495);
+			this.ClientSize = new System.Drawing.Size(756, 590);
+			this.Controls.Add(this.groupBox5);
 			this.Controls.Add(this.btnPrint);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label3);
@@ -297,7 +489,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.KeyPreview = true;
 			this.Name = "Form1";
-			this.Text = "Bartender标签打印 V20230807 X64";
+			this.Text = "Bartender标签打印 V20240229 X64";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -310,6 +502,8 @@
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox4.ResumeLayout(false);
 			this.groupBox4.PerformLayout();
+			this.groupBox5.ResumeLayout(false);
+			this.groupBox5.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -337,6 +531,21 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkAutoPrint;
         private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.GroupBox groupBox5;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.ListBox lstYear;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.DateTimePicker dtDateTo;
+		private System.Windows.Forms.DateTimePicker dtDateFrom;
+		private System.Windows.Forms.TextBox txtBatchNo;
+		private System.Windows.Forms.Label txt;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.ComboBox comboBox3;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.ComboBox comboBox2;
+		private System.Windows.Forms.TextBox txtPlanQty;
+		private System.Windows.Forms.Label label12;
 	}
 }
 
