@@ -400,8 +400,8 @@ namespace BartenderStudy
         //更新失效日期
         void updateDateTo()
 		{
-            DateTime.TryParse(textBox1.Text, out DateTime dt);
-            //dtDateTo.Value = dtDateFrom.Value.AddYears(int.Parse(lstYear.SelectedItem.ToString())).AddDays(-1);
+            
+            dtDateTo.Value = dtDateFrom.Value.AddYears(int.Parse(lstYear.SelectedItem.ToString())).AddDays(-1);
             if (IsLeapYear(dtDateFrom.Value.Year) && dtDateFrom.Value.Month == 2 && dtDateFrom.Value.Day == 29)
             {
                 dtDateTo.Value = dtDateTo.Value.AddDays(1);
